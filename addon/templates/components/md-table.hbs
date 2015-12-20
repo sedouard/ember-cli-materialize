@@ -1,12 +1,12 @@
 <thead>
   <tr>
-    {{#each columnComponents as |column|}}
+    {{#each columnComponents key="@index" as |column|}}
       {{view column.headerView column=column}}
     {{/each}}
   </tr>
 </thead>
 <tbody>
-  {{#each content as |row|}}
+  {{#each content key="@index" as |row|}}
     <tr>
       {{yield row}}
     </tr>
